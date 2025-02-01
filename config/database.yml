@@ -22,6 +22,8 @@ default: &default
 development:
   <<: *default
   database: theatre_notes_development
+  username: <%= ENV["THEATRE_NOTES_DATABASE_USERNAME"] %>
+  password: <%= ENV["THEATRE_NOTES_DATABASE_PASSWORD"] %>
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -80,5 +82,5 @@ test:
 production:
   <<: *default
   database: theatre_notes_production
-  username: theatre_notes
-  password: <%= ENV["THEATRE_NOTES_DATABASE_PASSWORD"] %>
+  # username: <%= ENV["THEATRE_NOTES_DATABASE_USERNAME"] %>
+  # password: <%= ENV["THEATRE_NOTES_DATABASE_PASSWORD"] %>

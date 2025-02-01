@@ -1,0 +1,2 @@
+module RehearsalReportsHelper
+end
